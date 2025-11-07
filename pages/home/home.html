@@ -1,41 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
-  <title>Furiati Sneaker Store</title>
+  <title>SENAI Zerbini</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/home.css">
+  <style>
+    /* Pequeno CSS para garantir altura uniforme do carrossel mantendo o uso do Bootstrap */
+    .carousel-fixed {
+      height: 320px;
+    }
+    .carousel-fixed .carousel-item,
+    .carousel-fixed .carousel-item img {
+      height: 100%;
+    }
+    .carousel-fixed .carousel-item img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Ajuste responsivo */
+    @media (max-width: 576px) {
+      .carousel-fixed {
+        height: 180px;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
 
   <!-- Cabeçalho -->
-  <div class="bg-dark text-white text-center py-3">
-    <h1>Furiati Sneaker Store</h1>
-    <p>Os melhores tênis pelos melhores preços</p>
-  </div>
+  <header class="bg-danger text-white text-center py-3">
+    <div class="container">
+      <h1 class="h3 mb-0">SENAI Zerbini</h1>
+      <p class="mb-0 small">A melhor escola técnica do Brasil</p>
+    </div>
+  </header>
 
-<!-- Conteúdo principal -->
-<div class="container-fluid mt-4">
-  <div class="text-center">
-    <img src="../../img/logo.jpg" class="img-fluid rounded mb-4" alt="Banner" id="img">
-    <h2 class="lead">Seja bem-vindo à nossa loja!</h2>
-  </div>
-</div>
+  <!-- Conteúdo principal -->
+  <main class="container my-4">
+    <div class="text-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/SENAI_S%C3%A3o_Paulo_logo.png/960px-SENAI_S%C3%A3o_Paulo_logo.png"
+           class="img-fluid rounded mb-3"
+           alt="Logo SENAI" style="max-width: 560px;">
+      <h2 class="h5 text-secondary">Seja bem-vindo ao SENAI</h2>
+    </div>
 
-<style>
-    .img{
-        width: 5px;
-        height: 5px;
-    }
-</style>
+    <!-- Carrossel Bootstrap com altura fixa via classe carousel-fixed -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fixed mt-4" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
 
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active h-100">
+          <img src="https://fcb.edu.br/wp-content/uploads/2022/05/curso-analise-desenvolvimento-de-sistemas-unicb-2-1.jpg"
+               class="d-block w-100 h-100" alt="Slide 1">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-2">
+            <h5 class="mb-0">Desenvolvimento de sistemas</h5>
+            
+          </div>
+        </div>
+
+        <div class="carousel-item h-100">
+          <img src="https://blog.kalatec.com.br/wp-content/uploads/2021/04/O-que-e-instrumentacao-industrial.jpg"
+               class="d-block w-100 h-100" alt="Slide 2">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-2">
+            <h5 class="mb-0">Instrumentação Industrial</h5>
+           
+          </div>
+        </div>
+
+        <div class="carousel-item h-100">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwGC-Vi6-v38tbdFDtsmqDYQiGruBeTf1_Rg&s"
+               class="d-block w-100 h-100" alt="Slide 3">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded px-2">
+            <h5 class="mb-0">Alimentos</h5>
+            
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </main>
 
   <!-- Rodapé -->
-  <footer class="bg-light text-center py-3 fixed-bottom">
-    <p class="mb-0">&copy; 2025 Furiati Sneaker Store</p>
+   <footer class="mt-auto text-center">
+    <div class="container">
+      <p class="mb-0 small">&copy; SENAI Campinas - Zerbini - Prof. Dr. Euryclides de Jesus Zerbini</p>
+    </div>
   </footer>
-
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

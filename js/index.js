@@ -6,8 +6,8 @@ const pages = [
     },
     {
         id:"p02",
-        name:"produtos",
-        url:"./pages/product/product1.html"
+        name:"eventos",
+        url:"./pages/eventos/eventos.html"
     },
     {
         id:"p03",
@@ -34,7 +34,7 @@ document.getElementById('home').addEventListener('click', () => {
     openPage(pages[0].url);
 })
 
-document.getElementById('products').addEventListener('click', () => {
+document.getElementById('eventos').addEventListener('click', () => {
     openPage(pages[1].url);
 })
 
