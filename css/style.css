@@ -1,0 +1,15 @@
+.photo_profile{
+    width: 40px;
+    height: 40px;
+}
+
+.card iframe{
+    min-height: 90vh;
+}
+
+@media (min-width:768px){
+    .sidebar{
+        height:100vh;
+    }
+}
+
